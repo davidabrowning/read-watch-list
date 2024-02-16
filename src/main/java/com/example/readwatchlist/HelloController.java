@@ -163,12 +163,13 @@ public class HelloController {
         String newTitle = bookTitleInput.getText();
         String newAuthor = bookAuthorInput.getText();
         Book newBook = new Book(newTitle, newAuthor);
-        if (newTitle.length() > 0 && newAuthor.length() > 0 && !booksToRead.contains(newBook)) {
-            booksToRead.add(newBook);
-            bookTitleInput.clear();
-            bookAuthorInput.clear();
-            bookTitleInput.requestFocus();
+        if (newTitle.isEmpty() || newAuthor.isEmpty() || booksToRead.contains(newBook)) {
+            return;
         }
+        booksToRead.add(newBook);
+        bookTitleInput.clear();
+        bookAuthorInput.clear();
+        bookTitleInput.requestFocus();
     }
 
     protected Tab createMoviesToWatchTab() {
@@ -254,12 +255,13 @@ public class HelloController {
         String newTitle = movieTitleInput.getText();
         String newLocation = movieLocationInput.getText();
         Movie newMovie = new Movie(newTitle, newLocation);
-        if (newTitle.length() > 0 && newLocation.length() > 0 && !moviesToWatch.contains(newMovie)) {
-            moviesToWatch.add(newMovie);
-            movieTitleInput.clear();
-            movieLocationInput.clear();
-            movieTitleInput.requestFocus();
+        if (newTitle.isEmpty() || newLocation.isEmpty() || moviesToWatch.contains(newMovie)) {
+            return;
         }
+        moviesToWatch.add(newMovie);
+        movieTitleInput.clear();
+        movieLocationInput.clear();
+        movieTitleInput.requestFocus();
     }
 
 }
