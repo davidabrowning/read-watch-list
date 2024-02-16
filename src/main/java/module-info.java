@@ -1,6 +1,6 @@
 module com.example.readwatchlist {
     requires javafx.controls;
-    requires javafx.fxml;
+    requires javafx.base;
 
 
     opens com.example.readwatchlist to javafx.fxml;
