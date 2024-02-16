@@ -187,7 +187,7 @@ public class HelloController {
         // Add data to the Table
         movieTable.setItems(moviesToWatch);
 
-        // Create input Textfields
+        // Create input TextFields
         TextField movieTitleInput = new TextField();
         movieTitleInput.setPromptText("Movie title");
         TextField movieLocationInput = new TextField();
