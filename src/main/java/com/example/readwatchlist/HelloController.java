@@ -91,7 +91,7 @@ public class HelloController {
         bookAuthorColumn.setCellValueFactory(new PropertyValueFactory<>("author"));
         bookTable.getColumns().add(bookTitleColumn);
         bookTable.getColumns().add(bookAuthorColumn);
-        bookTable.setColumnResizePolicy(bookTable.CONSTRAINED_RESIZE_POLICY_ALL_COLUMNS);
+        bookTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY_ALL_COLUMNS);
 
 
         // Add data to the Table
@@ -184,7 +184,7 @@ public class HelloController {
         movieLocationColumn.setCellValueFactory(new PropertyValueFactory<>("location"));
         movieTable.getColumns().add(movieTitleColumn);
         movieTable.getColumns().add(movieLocationColumn);
-        movieTable.setColumnResizePolicy(movieTable.CONSTRAINED_RESIZE_POLICY_ALL_COLUMNS);
+        movieTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY_ALL_COLUMNS);
 
         // Add data to the Table
         movieTable.setItems(moviesToWatch);
