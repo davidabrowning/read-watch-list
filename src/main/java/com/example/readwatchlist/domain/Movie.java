@@ -10,7 +10,7 @@ public class Movie extends ConsumableMedia {
     }
 
     public String getLocation() { return location; }
-    public void setLocation(String location) { this.location = location; }
+    // Never used: public void setLocation(String location) { this.location = location; }
 
     public boolean equals(Object o) {
         if (this == o) {

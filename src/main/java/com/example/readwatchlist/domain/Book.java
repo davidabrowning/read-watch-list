@@ -10,7 +10,7 @@ public class Book extends ConsumableMedia {
     }
 
     public String getAuthor() { return author; }
-    public void setAuthor(String author) { this.author = author; }
+    // Never used: public void setAuthor(String author) { this.author = author; }
 
     @Override
     public boolean equals(Object o) {

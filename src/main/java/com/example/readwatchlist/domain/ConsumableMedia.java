@@ -9,7 +9,7 @@ public abstract class ConsumableMedia {
     }
 
     public String getTitle() { return title; }
-    public void setTitle(String title) { this.title = title; }
+    // Never used: public void setTitle(String title) { this.title = title; }
 
     public abstract boolean equals(Object o);
 
