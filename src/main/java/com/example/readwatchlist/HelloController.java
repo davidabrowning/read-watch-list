@@ -26,8 +26,8 @@ public class HelloController {
     File file;
     Scanner fileReader;
     PrintWriter printWriter;
-    ObservableList booksToRead;
-    ObservableList moviesToWatch;
+    ObservableList<Book> booksToRead;
+    ObservableList<Movie> moviesToWatch;
 
     public HelloController() {
 
@@ -67,12 +67,10 @@ public class HelloController {
     protected void saveToFile() {
         try {
             printWriter = new PrintWriter(file);
-            for (Object o : booksToRead) {
-                Book book = (Book) o;
+            for (Book book : booksToRead) {
                 printWriter.println("BOOK:::" + book.getTitle() + ":::" + book.getAuthor());
             }
-            for (Object o : moviesToWatch) {
-                Movie movie = (Movie) o;
+            for (Movie movie : moviesToWatch) {
                 printWriter.println("MOVIE:::" + movie.getTitle() + ":::" + movie.getLocation());
             }
             printWriter.close();
@@ -84,11 +82,11 @@ public class HelloController {
     protected Tab createBooksToReadTab() {
 
         // Create Table
-        TableView bookTable = new TableView();
+        TableView<Book> bookTable = new TableView<>();
         bookTable.setEditable(false);
         bookTable.setPlaceholder(new Label("No books in reading list"));
-        TableColumn bookTitleColumn = new TableColumn("Title");
-        TableColumn bookAuthorColumn = new TableColumn("Author");
+        TableColumn<Book, String> bookTitleColumn = new TableColumn<>("Title");
+        TableColumn<Book, String> bookAuthorColumn = new TableColumn<>("Author");
         bookTitleColumn.setCellValueFactory(new PropertyValueFactory<>("title"));
         bookAuthorColumn.setCellValueFactory(new PropertyValueFactory<>("author"));
         bookTable.getColumns().add(bookTitleColumn);
@@ -161,7 +159,7 @@ public class HelloController {
         return booksToReadTab;
     }
 
-    private void addBook(TextField bookTitleInput, TextField bookAuthorInput, ObservableList booksToRead) {
+    private void addBook(TextField bookTitleInput, TextField bookAuthorInput, ObservableList<Book> booksToRead) {
         String newTitle = bookTitleInput.getText();
         String newAuthor = bookAuthorInput.getText();
         Book newBook = new Book(newTitle, newAuthor);
@@ -176,11 +174,11 @@ public class HelloController {
     protected Tab createMoviesToWatchTab() {
 
         // Create Table
-        TableView movieTable = new TableView();
+        TableView<Movie> movieTable = new TableView<>();
         movieTable.setEditable(false);
         movieTable.setPlaceholder(new Label("No movies in watch list"));
-        TableColumn movieTitleColumn = new TableColumn("Title");
-        TableColumn movieLocationColumn = new TableColumn("Location");
+        TableColumn<Movie, String> movieTitleColumn = new TableColumn<>("Title");
+        TableColumn<Movie, String> movieLocationColumn = new TableColumn<>("Location");
         movieTitleColumn.setCellValueFactory(new PropertyValueFactory<>("title"));
         movieLocationColumn.setCellValueFactory(new PropertyValueFactory<>("location"));
         movieTable.getColumns().add(movieTitleColumn);
@@ -252,7 +250,7 @@ public class HelloController {
         return moviesToWatchTab;
     }
 
-    private void addMovie(TextField movieTitleInput, TextField movieLocationInput, ObservableList moviesToWatch) {
+    private void addMovie(TextField movieTitleInput, TextField movieLocationInput, ObservableList<Movie> moviesToWatch) {
         String newTitle = movieTitleInput.getText();
         String newLocation = movieLocationInput.getText();
         Movie newMovie = new Movie(newTitle, newLocation);
