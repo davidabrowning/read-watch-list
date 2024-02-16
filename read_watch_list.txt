@@ -1,5 +1,8 @@
 BOOK:::Radical Acceptance:::Tara Brach
 BOOK:::Republic:::Plato
 BOOK:::Zen and the Art of Motorcycle Maintenance:::Robert M. Pirsig
+BOOK:::Transit of Venus:::Shirley Hazzard
 MOVIE:::The Big Lebowski:::YouTube
 MOVIE:::Origin:::In theaters
+MOVIE:::Casablanca:::iTunes
+MOVIE:::The Big Short:::YouTube
