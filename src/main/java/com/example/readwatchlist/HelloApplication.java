@@ -12,7 +12,7 @@ import javafx.scene.control.Tab;
 public class HelloApplication extends Application {
 
     @Override
-    public void start(Stage stage) throws IOException {
+    public void start(Stage stage) {
 
         HelloController helloController = new HelloController();
 
