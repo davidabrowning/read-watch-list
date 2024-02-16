@@ -27,11 +27,8 @@ public class Movie extends ConsumableMedia {
         String thisLocation = this.getLocation().toLowerCase();
         String thatTitle = comparedMovie.getTitle().toLowerCase();
         String thatLocation = comparedMovie.getLocation().toLowerCase();
-        if (thisTitle.equals(thatTitle) && thisLocation.equals(thatLocation)) {
-            return true;
-        }
 
-        return false;
+        return thisTitle.equals(thatTitle) && thisLocation.equals(thatLocation);
     }
 
 }

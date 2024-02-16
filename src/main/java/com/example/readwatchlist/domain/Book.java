@@ -29,10 +29,7 @@ public class Book extends ConsumableMedia {
         String thisAuthor = this.author.toLowerCase();
         String thatAuthor = comparedBook.author.toLowerCase();
 
-        if (thisTitle.equals(thatTitle) && thisAuthor.equals(thatAuthor)) {
-            return true;
-        }
-        return false;
+        return thisTitle.equals(thatTitle) && thisAuthor.equals(thatAuthor);
     }
 
 }
