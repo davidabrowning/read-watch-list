@@ -18,7 +18,8 @@ class MovieTest {
 
     @Test
     void moviesAreEqualIfTheyAreSameObject() {
-        assertEquals(americanFiction, americanFiction);
+        Object o = americanFiction;
+        assertEquals(o, americanFiction);
     }
 
     @Test

@@ -18,7 +18,8 @@ class BookTest {
 
     @Test
     void booksAreEqualIfTheyAreSameObject() {
-        assertEquals(platosRepublic, platosRepublic);
+        Object o = platosRepublic;
+        assertEquals(o, platosRepublic);
     }
 
     @Test
