@@ -24,8 +24,6 @@ import javafx.scene.control.Tab;
 public class HelloController {
 
     private final File file;
-    private Scanner fileReader;
-    private PrintWriter printWriter;
     private final ObservableList<Book> booksToRead;
     private final ObservableList<Movie> moviesToWatch;
 
@@ -41,7 +39,7 @@ public class HelloController {
 
     protected void loadFromFile() {
         try {
-            fileReader = new Scanner(file);
+            Scanner fileReader = new Scanner(file);
             while(fileReader.hasNextLine()) {
                 String row = fileReader.nextLine();
                 String[] rowParts = row.split(":::");
@@ -66,7 +64,7 @@ public class HelloController {
 
     protected void saveToFile() {
         try {
-            printWriter = new PrintWriter(file);
+            PrintWriter printWriter = new PrintWriter(file);
             for (Book book : booksToRead) {
                 printWriter.println("BOOK:::" + book.getTitle() + ":::" + book.getAuthor());
             }
