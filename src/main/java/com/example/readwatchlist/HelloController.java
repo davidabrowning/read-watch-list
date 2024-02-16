@@ -95,7 +95,7 @@ public class HelloController {
         // Add data to the Table
         bookTable.setItems(booksToRead);
 
-        // Create input Textfields
+        // Create input TextFields
         TextField bookTitleInput = new TextField();
         bookTitleInput.setPromptText("Book title");
         TextField bookAuthorInput = new TextField();
