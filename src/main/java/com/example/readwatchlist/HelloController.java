@@ -23,11 +23,11 @@ import javafx.scene.control.Tab;
 
 public class HelloController {
 
-    File file;
-    Scanner fileReader;
-    PrintWriter printWriter;
-    ObservableList<Book> booksToRead;
-    ObservableList<Movie> moviesToWatch;
+    private File file;
+    private Scanner fileReader;
+    private PrintWriter printWriter;
+    private ObservableList<Book> booksToRead;
+    private ObservableList<Movie> moviesToWatch;
 
     public HelloController() {
 
