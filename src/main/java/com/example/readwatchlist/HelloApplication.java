@@ -28,12 +28,10 @@ import javafx.scene.control.Tab;
 
 public class HelloApplication extends Application {
 
-    private HelloController helloController;
-
     @Override
     public void start(Stage stage) throws IOException {
 
-        helloController = new HelloController();
+        HelloController helloController = new HelloController();
 
         // Create the tabs
         TabPane tabPane = new TabPane();
